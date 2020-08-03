@@ -1,26 +1,28 @@
-Given an input string, reverse the string word by word.
+Detect Capital:
 
+Given a word, you need to judge whether the usage of capitals in it is right or not.
+
+We define the usage of capitals in a word to be right when one of the following cases holds:
+
+All letters in this word are capitals, like "USA".
+All letters in this word are not capitals, like "leetcode".
+Only the first letter in this word is capital, like "Google".
+Otherwise, we define that this word doesn't use capitals in a right way.
  
 
 Example 1:
 
-Input: "the sky is blue"
-Output: "blue is sky the"
+Input: "USA"
+Output: True
+ 
+
 Example 2:
 
-Input: "  hello world!  "
-Output: "world! hello"
-Explanation: Your reversed string should not contain leading or trailing spaces.
-Example 3:
+Input: "FlaG"
+Output: False
 
-Input: "a good   example"
-Output: "example good a"
-Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
- 
 
-Note:
-
-A word is defined as a sequence of non-space characters.
-Input string may contain leading or trailing spaces. However, your reversed string should not contain leading or trailing spaces.
-You need to reduce multiple spaces between two words to a single space in the reversed string.
- 
+//My solution details:
+Runtime: 84 ms
+Memory Usage: 38 MB
+Your runtime beats 56.09 % of javascript submissions.
