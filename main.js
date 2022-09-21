@@ -1,14 +1,19 @@
-var runningSum = function(nums) {
-    let output = [];
-    for(let i=0;i<nums.length;i++) {
-        let sum = 0;
-        for(let j=0;j<i+1;j++) {
-            sum = sum + nums[j]
+var pivotIndex = function(nums) {
+    for(let i=0;i< nums.length;i++) {
+        let leftSum = 0;
+        let rightSum = 0;
+        for(let j=0; j<i; j++) {
+            leftSum = leftSum + nums[j];
         }
-        output[i] = sum;
+        for(let k=i+1; k<nums.length; k++) {
+            rightSum = rightSum + nums[k];   
+        }
+        if(leftSum === rightSum) {
+            return i;
+        }
     }
-    return output
+     return -1;
 };
 
-let nums = [1,2,3,4]
-runningSum(nums);
+let nums = [2,1,-1]
+pivotIndex(nums);
